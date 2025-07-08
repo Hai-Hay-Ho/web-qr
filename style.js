@@ -17,3 +17,16 @@ function generateQRCode() {
         correctLevel: QRCode.CorrectLevel.H
     });
 }
+function downloadQRCode() {
+    const qrCanvas = document.querySelector("#qrcode canvas");
+    if (!qrCanvas) {
+        alert("Vui lòng tạo mã QR trước!");
+        return;
+    }
+
+    const imageData = qrCanvas.toDataURL("image/png");
+    const link = document.createElement("a");
+    link.href = imageData;
+    link.download = "mã-qr.png";
+    link.click();
+}

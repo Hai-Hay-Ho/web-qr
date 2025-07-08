@@ -49,3 +49,6 @@ button:hover {
     display: flex;
     justify-content: center;
 }
+.mt-3 {
+    margin-top: 0 !important;
+}
